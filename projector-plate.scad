@@ -16,8 +16,8 @@ function get_fragments_from_r (r) = (
 
 screwholes = [
     [0, 0],
-    [mm (165), 0],
-    [mm (117.63), mm (106.98)]
+    [mm (164), 0],
+    [mm (118.05), mm (106.51)]
 ];
 
 $fs = 0.5;
