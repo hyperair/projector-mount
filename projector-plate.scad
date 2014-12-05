@@ -30,7 +30,7 @@ wall_thickness = 6;
 outer_d = screw_d + wall_thickness + clearance;
 plate_thickness = mm (5);
 
-arm_distance = mm (35);
+arm_distance = mm (30);
 arm_thickness = mm (5);
 arm_width = mm (30);
 arm_height = mm (35);
