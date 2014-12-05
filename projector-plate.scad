@@ -24,7 +24,8 @@ $fs = 0.5;
 $fa = 1;
 
 clearance = mm (0.3);
-screw_d = 5;
+screw_d = 4;
+shaft_d = 5;
 wall_thickness = 6;
 outer_d = screw_d + wall_thickness + clearance;
 plate_thickness = mm (5);
@@ -60,7 +61,7 @@ module arm ()
 
         place_arm_screwhole ()
         translate ([0, 0, -arm_width])
-        polyhole (d=screw_d + clearance, h=arm_width * 2);
+        polyhole (d=shaft_d + clearance, h=arm_width * 2);
     }
 }
 
