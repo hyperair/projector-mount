@@ -68,16 +68,22 @@ module plate ()
     }
 }
 
-fillet (r=fillet_r, steps=fillet_r / 0.2) {
+plate ();
+
+for (i=[1, -1])
+place_arm (i)
+single_arm ();
+
+fillet (r=fillet_r, steps=fillet_r / 0.2, include=false) {
     plate ();
 
     place_arm (-1)
-    arm ();
+    single_arm ();
 }
 
-fillet (r=fillet_r, steps=fillet_r / 0.2) {
+fillet (r=fillet_r, steps=fillet_r / 0.2, include=false) {
     plate ();
 
     place_arm (1)
-    arm ();
+    single_arm ();
 }
