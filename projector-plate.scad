@@ -1,6 +1,7 @@
 include <MCAD/units/metric.scad>
 use <MCAD/shapes/polyhole.scad>
 use <fillet.scad>
+use <arm.scad>
 
 function mm (x) = length_mm (x);
 function centroid (a, b, c) = [
@@ -43,34 +44,16 @@ module place_screws () {
     children ();
 }
 
-module arm ()
-{
-    module place_arm_screwhole ()
-    translate ([0, 0, arm_height - arm_width / 2 + plate_thickness])
-    rotate (90, X)
-    children ();
-
-    difference () {
-        hull () {
-            place_arm_screwhole ()
-            cylinder (d=arm_width, h=arm_thickness, center=true);
-
-            translate ([0, 0, epsilon / 2])
-            cube ([arm_width, arm_thickness, epsilon], center=true);
-        }
-
-        place_arm_screwhole ()
-        translate ([0, 0, -arm_width])
-        polyhole (d=shaft_d + clearance, h=arm_width * 2);
-    }
-}
-
 module place_arm (i)
 {
     translate (centroid (screwholes[0], screwholes[1], screwholes[2]))
     translate ([0, i * (arm_distance + arm_thickness) / 2, 0])
     children ();
 }
+
+module single_arm ()
+arm (height = arm_height, width = arm_width, thickness = arm_thickness,
+    shaft_d = shaft_d + clearance);
 
 module plate ()
 {
@@ -86,14 +69,15 @@ module plate ()
 }
 
 fillet (r=fillet_r, steps=fillet_r / 0.2) {
-    render ()
-    fillet (r=fillet_r, steps=fillet_r / 0.2) {
-        plate ();
-
-        place_arm (1)
-        arm ();
-    }
+    plate ();
 
     place_arm (-1)
+    arm ();
+}
+
+fillet (r=fillet_r, steps=fillet_r / 0.2) {
+    plate ();
+
+    place_arm (1)
     arm ();
 }
