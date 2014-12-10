@@ -15,19 +15,13 @@ hollow_h = 10;
 n_holes = 12;
 hole_orbit_r = 35;
 
-module fillet2d (d)
+module fillet2d (r)
 {
     difference () {
-        square ([d, d]);
+        square ([r, r]);
 
-        translate ([(d + epsilon)/2, (d + epsilon)/2])
-        circle (d=d + epsilon);
-
-        translate ([d/2, -epsilon])
-        square ([d * 2, d * 2]);
-
-        translate ([-epsilon, d/2])
-        square ([d * 2, d * 2]);
+        translate ([r + epsilon, r + epsilon])
+        circle (r=r + epsilon);
     }
 }
 
