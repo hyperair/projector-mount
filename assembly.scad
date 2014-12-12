@@ -3,7 +3,7 @@ import ("ceiling-plate.stl");
 translate ([0, 0, 16])
 import ("swivel.stl");
 
-translate ([0, -28/2, 64])
+translate ([0, -28/2, 59])
 rotate ([-90, 0, 0])
 import ("../ProjectorUniversal2.stl");
 

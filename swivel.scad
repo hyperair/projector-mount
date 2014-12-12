@@ -8,7 +8,7 @@ $fa = 1;
 
 module single_arm ()
 rotate (90, Z)
-arm (height=45, width=30, thickness=5, shaft_d=5.3);
+arm (height=40, width=30, thickness=5, shaft_d=5.3);
 
 module place_arm (i)
 {
