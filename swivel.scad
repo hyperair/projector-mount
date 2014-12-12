@@ -18,8 +18,7 @@ module place_arm (i)
 
 module base_plate ()
 difference () {
-    linear_extrude (height=10)
-    square ([40, 30], center=true);
+    cylinder (d=50, h=5);
 
     translate ([0, 0, -epsilon])
     polyhole (d=5.3, h=10 + epsilon * 2);

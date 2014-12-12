@@ -8,7 +8,7 @@ $fs = 0.5;
 
 plate_thickness = 5;
 plate_d = 90;
-hub_d = 40;
+hub_d = 50;
 hub_thickness = 15;
 hollow_d = 25;
 hollow_h = 10;
