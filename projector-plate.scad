@@ -20,6 +20,7 @@ screwholes = [
     [mm (164), 0],
     [mm (118.05), mm (106.51)]
 ];
+center = centroid (screwholes[0], screwholes[1], screwholes[2]);
 
 $fs = 0.5;
 $fa = 1;
@@ -46,7 +47,7 @@ module place_screws () {
 
 module place_arm (i)
 {
-    translate (centroid (screwholes[0], screwholes[1], screwholes[2]))
+    translate (center)
     translate ([0, i * (arm_distance + arm_thickness) / 2, 0])
     children ();
 }
