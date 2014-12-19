@@ -38,7 +38,7 @@ stiffener_width = mm (5);
 arm_distance = mm (30);
 arm_thickness = mm (5);
 arm_width = mm (30);
-arm_height = mm (35);
+arm_height = mm (40);
 
 fillet_r = mm (5);
 fillet_steps = get_fragments_from_r (fillet_r) * 0.25; // 90° joint
