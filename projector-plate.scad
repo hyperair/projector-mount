@@ -28,8 +28,8 @@ $fa = 1;
 clearance = mm (0.3);
 screw_d = 4;
 shaft_d = 5;
-wall_thickness = 6;
-outer_d = screw_d + wall_thickness + clearance;
+wall_thickness = 10;
+outer_d = screw_d + wall_thickness * 2 + clearance;
 plate_thickness = mm (5);
 
 arm_distance = mm (30);
