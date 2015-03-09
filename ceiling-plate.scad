@@ -36,16 +36,16 @@ difference () {
 
     // hollow portion
     translate ([0, 0, -epsilon])
-    polyhole (d=hollow_d, h=hollow_h + epsilon);
+    mcad_polyhole (d=hollow_d, h=hollow_h + epsilon);
 
     // main screw hole
     translate ([0, 0, hollow_h + 1])
-    polyhole (d=5, h=300);
+    mcad_polyhole (d=5, h=300);
 
     for (i=[0:n_holes]) {
         rotate (i / n_holes * 360, Z)
         translate ([hole_orbit_r, 0, -epsilon])
-        polyhole (d=5.3, h=plate_thickness * 2);
+        mcad_polyhole (d=5.3, h=plate_thickness * 2);
     }
 }
 

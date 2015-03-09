@@ -85,7 +85,7 @@ module screwpolyholes ()
 {
     place_screws ()
     translate ([0, 0, -epsilon])
-    polyhole (d=screw_d + clearance, h=stiffener_thickness * 2);
+    mcad_polyhole (d=screw_d + clearance, h=stiffener_thickness * 2);
 }
 
 module screwhub (i)

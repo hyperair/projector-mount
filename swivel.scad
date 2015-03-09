@@ -21,7 +21,7 @@ difference () {
     cylinder (d=50, h=5);
 
     translate ([0, 0, -epsilon])
-    polyhole (d=5.3, h=10 + epsilon * 2);
+    mcad_polyhole (d=5.3, h=10 + epsilon * 2);
 }
 
 fillet (r=5, steps=20) {

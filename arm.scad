@@ -19,6 +19,6 @@ module arm (height, width, thickness, shaft_d)
 
         place_arm_screwhole ()
         translate ([0, 0, -width])
-        polyhole (d=shaft_d, h=width * 2);
+        mcad_polyhole (d=shaft_d, h=width * 2);
     }
 }
