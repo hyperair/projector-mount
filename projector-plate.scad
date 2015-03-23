@@ -170,7 +170,7 @@ difference () {
         }
 
         // fillet the screwhubs
-        for (i = [0 : len (screwholes)]) {
+        for (i = [0 : len (screwholes) - 1]) {
             fillet (r=fillet_r, steps=fillet_steps, include=false) {
                 basic_plate ();
                 screwhub (i);
