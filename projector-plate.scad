@@ -17,9 +17,9 @@ function get_fragments_from_r (r) = (
 );
 
 screwholes = [
-    [0, 0],
-    [mm (164), 0],
-    [mm (118.05), mm (106.51)]
+    [0, mm (115)],
+    [mm (160 - 137), 0],
+    [mm (160), mm (80)]
 ];
 center = centroid (screwholes[0], screwholes[1], screwholes[2]);
 
