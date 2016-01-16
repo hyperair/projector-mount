@@ -16,11 +16,20 @@ function get_fragments_from_r (r) = (
     ceil (max (min (360 / $fa, r * 2 * PI / $fs), 5))
 );
 
-screwholes = [
+benq_w1070_screwholes = [
     [0, mm (115)],
     [mm (160 - 137), 0],
     [mm (160), mm (80)]
 ];
+
+epson_eb101760w_screwholes = [
+    [0, 0],
+    [226, 0],
+    [85.88716814159291, 85.231416441461]
+];
+
+screwholes = epson_eb101760w_screwholes;
+
 center = centroid (screwholes[0], screwholes[1], screwholes[2]);
 
 $fs = 0.5;
