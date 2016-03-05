@@ -28,7 +28,13 @@ epson_eb101760w_screwholes = [
     [85.88716814159291, 85.231416441461]
 ];
 
-screwholes = epson_eb101760w_screwholes;
+epson_emp_s3_screwholes = [
+    [0, 0],
+    [242, 0],
+    [134, 85.5]
+];
+
+screwholes = epson_emp_s3_screwholes;
 
 center = centroid (screwholes[0], screwholes[1], screwholes[2]);
 
